@@ -1,5 +1,6 @@
 import { loadHome } from "./home";
 import { loadMenu } from "./menu";
+import { loadContacts } from "./contact";
 
 const content = document.querySelector(".content");
 let container = document.createElement("div");
@@ -36,3 +37,4 @@ content.appendChild(createHeader());
 content.appendChild(container);
 content.appendChild(loadHome());
 content.appendChild(loadMenu());
+content.appendChild(loadContacts());
