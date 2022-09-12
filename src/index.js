@@ -1,4 +1,5 @@
 import { loadHome } from "./home";
+import { loadMenu } from "./menu";
 
 const content = document.querySelector(".content");
 let container = document.createElement("div");
@@ -34,3 +35,4 @@ container.classList.add("container");
 content.appendChild(createHeader());
 content.appendChild(container);
 content.appendChild(loadHome());
+content.appendChild(loadMenu());
