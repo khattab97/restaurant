@@ -1,4 +1,8 @@
+import {loadHome} from "./home";
+
+
 const content = document.querySelector('.content');
+let container = document.createElement('div');
 
 
 function createHeader () {
@@ -28,4 +32,8 @@ function createNav (){
     return navBar;
 }
 
+container.classList.add('container');
+
 content.appendChild(createHeader());
+content.appendChild(container);
+content.appendChild(loadHome());
