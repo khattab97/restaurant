@@ -31,6 +31,12 @@ function createNav() {
   return navBar;
 }
 
+function createFooter() {
+  let footer = document.createElement("footer");
+  footer.textContent = "Copyright © 2022";
+  return footer;
+}
+
 container.classList.add("container");
 
 content.appendChild(createHeader());
@@ -38,3 +44,4 @@ content.appendChild(container);
 content.appendChild(loadHome());
 content.appendChild(loadMenu());
 content.appendChild(loadContacts());
+content.appendChild(createFooter());
