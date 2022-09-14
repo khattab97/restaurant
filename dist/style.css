@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #353535;
+    min-height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+    background-image: url("../src/images/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    overflow-x: hidden;
+}
+
+.content {
+    display: grid;
+    justify-items: center;
+    gap: 70px;
+}
+
+.dish, .days, .loc {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header {
+    width: 100%;
+    padding-bottom: 50px;
+    font-family: 'Bevan', cursive;
+    font-size: 60px;
+    letter-spacing: 5px;
+}
+
+header > h1 {
+    margin: 0;
+    letter-spacing: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+button {
+    height: 60px;
+    width: 300px;
+    padding: 5px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: black;
+    border: 1px solid red;
+    color: red;
+    border-radius: 25px;
+}
+
+button:hover {
+    background-color: #312e2e;
+}
+
+button:active {
+    background-color: #252525;
+}
+
+footer {
+    padding: 20px;
+    background-color: black;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+
+}
+
+.home p {
+    font-size: 25px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.dish, .days, .loc {
+    height: auto;
+    width: 500px;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dish > img {
+    height: 80%;
+    width: 100%;
+}
+
+.dish > h2, .dish > p {
+    text-align: left;
+    padding: 0 20px;
+
+}
+
+.dish > h3 {
+    margin: 0;
+}
+
+.dish > p {
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+.days {
+    font-size: 20px;
+    padding: 50px 0;
+}
+
+.menu {
+    display: none;
+}
+.contacts {
+    display: none;
+}
