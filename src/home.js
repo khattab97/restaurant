@@ -6,7 +6,7 @@ function loadHome() {
     let dish = document.createElement("div");
     let title = document.createElement("h1");
     let img = new Image();
-    let dishName = document.createElement("p");
+    let dishName = document.createElement("h2");
     let description = document.createElement("p");
 
     dish.classList.add("dish");
@@ -27,7 +27,7 @@ function loadHome() {
 
   function hours() {
     let days = document.createElement("div");
-    let title = document.createElement("h3");
+    let title = document.createElement("h1");
     let sunday = document.createElement("p");
     let monday = document.createElement("p");
     let tuesday = document.createElement("p");
@@ -60,7 +60,7 @@ function loadHome() {
 
   function location() {
     let loc = document.createElement("div");
-    let title = document.createElement("h3");
+    let title = document.createElement("h1");
     let content = document.createElement("p");
 
     loc.classList.add("loc");
