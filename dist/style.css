@@ -92,7 +92,7 @@ footer {
     gap: 25px;
 }
 
-.dish, .days, .loc {
+.dish, .days, .loc, .official {
     height: auto;
     width: 500px;
     border-radius: 7px;
@@ -104,7 +104,7 @@ footer {
     width: 100%;
 }
 
-.dish > h2, .dish > p, .grid-item {
+.dish > h2, .dish > p, .grid-item, .official {
     text-align: left;
     padding: 0 20px;
 
@@ -125,7 +125,7 @@ footer {
 }
 
 .menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
 }
@@ -163,5 +163,27 @@ footer {
     object-fit: cover;
 }
 .contacts {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.official {
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.img-wrapper {
+    height: 150px;
+    width: 200px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.img-wrapper > img {
+    height: 100%;
+    width: 100%;
+    clip-path: circle();
 }

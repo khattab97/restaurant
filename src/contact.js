@@ -15,6 +15,8 @@ function loadContacts() {
     let official_number = document.createElement("p");
     let official_email = document.createElement("p");
 
+    official.classList.add("official");
+    info_wrapper.classList.add("info-wrapper");
     img.src = src;
     img_wrapper.classList.add("img-wrapper");
     img_wrapper.appendChild(img);
