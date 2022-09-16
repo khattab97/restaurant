@@ -2,9 +2,6 @@ import { loadHome } from "./home";
 import { loadMenu } from "./menu";
 import { loadContacts } from "./contact";
 
-const content = document.querySelector(".content");
-let container = document.createElement("div");
-
 function createHeader() {
   const header = document.createElement("header");
   const name = document.createElement("h1");
@@ -37,11 +34,32 @@ function createFooter() {
   return footer;
 }
 
-container.classList.add("container");
+(() => {
+  const content = document.querySelector(".content");
+  let container = document.createElement("div");
+  container.classList.add("container");
+  content.appendChild(createHeader());
+  content.appendChild(loadHome());
+  content.appendChild(loadMenu());
+  content.appendChild(loadContacts());
+  content.appendChild(createFooter());
+})();
 
-content.appendChild(createHeader());
-content.appendChild(container);
-content.appendChild(loadHome());
-content.appendChild(loadMenu());
-content.appendChild(loadContacts());
-content.appendChild(createFooter());
+let btns = document.querySelectorAll("button");
+btns.forEach((button) => {
+  button.addEventListener("click", populateMain);
+});
+
+function populateMain(e) {
+  const home = document.querySelector(".home");
+  const menu = document.querySelector(".menu");
+  const contact = document.querySelector(".contacts");
+
+  if (home.style.display !== "none") home.style.display = "none";
+  else if (menu.style.display !== "none") menu.style.display = "none";
+  else contact.style.display = "none";
+
+  if (this.textContent === "Home") home.style.display = "flex";
+  else if (this.textContent === "Menu") menu.style.display = "flex";
+  else contact.style.display = "flex";
+}

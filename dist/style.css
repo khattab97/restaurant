@@ -75,7 +75,7 @@ footer {
 
 
 .home {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 100px;
     align-items: center;
@@ -163,7 +163,7 @@ footer {
     object-fit: cover;
 }
 .contacts {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 30px;
 }
