@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 body, html {
     margin: 0;
     padding: 0;
@@ -19,7 +20,7 @@ body, html {
 .content {
     display: grid;
     justify-items: center;
-    gap: 70px;
+    gap: 30px;
 }
 
 .dish, .days, .loc {
@@ -74,7 +75,7 @@ footer {
 
 
 .home {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 100px;
     align-items: center;
@@ -95,7 +96,7 @@ footer {
     height: auto;
     width: 500px;
     border-radius: 7px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 
 .dish > img {
@@ -103,7 +104,7 @@ footer {
     width: 100%;
 }
 
-.dish > h2, .dish > p {
+.dish > h2, .dish > p, .grid-item {
     text-align: left;
     padding: 0 20px;
 
@@ -124,7 +125,42 @@ footer {
 }
 
 .menu {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu > h1 {
+    width: 100%;
+    font-size: 100px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px;
+}
+
+.grid-item {
+    height: auto;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0;
+    margin: 0 20px;
+}
+
+.container {
+    padding: 15px;
+}
+
+.grid-item > img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
 }
 .contacts {
     display: none;

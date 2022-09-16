@@ -2,6 +2,7 @@ function loadMenu() {
   let menu = document.createElement("div");
   menu.classList.add("menu");
   let title = document.createElement("h1");
+  title.textContent = "Menu";
   let grid = document.createElement("div");
   grid.classList.add("grid");
 
@@ -9,18 +10,21 @@ function loadMenu() {
     let gridItem = document.createElement("div");
     let img = new Image();
     img.src = `../src/images/${title.replace(" ", "-").toLowerCase()}.jpg`;
-    let name = document.createElement("p");
+    let container = document.createElement("div");
+    let name = document.createElement("h3");
     let description = document.createElement("p");
 
     gridItem.classList.add("grid-item");
+    container.classList.add("container");
     name.classList.add("name");
     name.textContent = title;
     description.classList.add("description");
     description.textContent = desc;
 
+    container.appendChild(name);
+    container.appendChild(description);
     gridItem.appendChild(img);
-    gridItem.appendChild(name);
-    gridItem.appendChild(description);
+    gridItem.appendChild(container);
 
     return gridItem;
   }
